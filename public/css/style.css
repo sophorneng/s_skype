@@ -9,11 +9,21 @@
     border-radius: 5px;
 }
 .submit{
-    padding: 8px;
+    padding: 5px;
     border-radius: 5px;
     font-family: var(--main-font);
     font-size: 15px;
     color: white;
     background-color: #3636C9;
     border-style: none;
+}
+.typedMessage{
+    padding: 10px;
+}
+.store{
+    width: 80%;
+}
+.messages{
+    font-family: var(--main-font);
+    color: var(--text-color);
 }
