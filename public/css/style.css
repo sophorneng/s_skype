@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.submit{
+    padding: 8px;
+    border-radius: 5px;
+    font-family: var(--main-font);
+    font-size: 15px;
+    color: white;
+    background-color: #3636C9;
+    border-style: none;
+}
