@@ -30,8 +30,8 @@ function displayUser(res){
         spanOfEdit.className ="edit fa fa-pencil-square-o hvr-grow";
 
         //append all spans to  fieldset//
-        fieldset.appendChild(spanOfquote);
-        fieldset.appendChild(spanOfEdit);
+        // fieldset.appendChild(spanOfquote);
+        // fieldset.appendChild(spanOfEdit);
         fieldset.appendChild(spanOfInput);
         
         // fieldset.appendChild(span_delete);
@@ -45,7 +45,8 @@ function displayUser(res){
     input.value = "";
 
 }
-
+const btnsubmit = document.querySelector("#submit");
+btnsubmit.addEventListener("click", BtnSubmit);
 
 
 
