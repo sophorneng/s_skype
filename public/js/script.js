@@ -1,7 +1,8 @@
 //display item on broswer//
-function displayUser(response){
-    let users = response.data;
-    const text = document.querySelector("#inputId");
+function displayUser(res){
+    let users = res.data;
+    console.log(users)
+    const input = document.querySelector("#inputId");
     let storeOfNewUser = document.querySelector(".store");
     const listOfUser = document.querySelector(".listOfUser");
     
@@ -16,9 +17,9 @@ function displayUser(response){
         const fieldset = document.createElement("fieldset");
         
 
-        //contain text message name and //
+        //contain text  and message name//
         const spanOfInput =document.createElement("span");
-        spanOfInput.textContent = user.username + ": " + user.text;
+        spanOfInput.textContent = user.username + ":" + user.text;
 
         //contain icon quote//
         const spanOfquote = document.createElement('span');
@@ -41,7 +42,7 @@ function displayUser(response){
     }
 
 
-    text.value = "";
+    input.value = "";
 
 }
 

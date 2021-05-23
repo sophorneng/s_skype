@@ -2,9 +2,10 @@
 .container{
   
   margin: auto;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  width: 80%;
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.4);
+  width: 70%;
   border-radius: 30px;
+  margin-right: 20px;
   
 }
 
@@ -14,16 +15,11 @@ h3{
 
 
 .store {
-  background: rgb(239, 242, 243);
+  background-image: url(http://st.depositphotos.com/1005549/1892/v/450/depositphotos_18921979-Starry-wave-pink.jpg);
   overflow:auto ;
   padding: 30px;
   height: 400px;
   
-
-  
-
-  
- 
  
 }
 .textmessage{
@@ -59,10 +55,10 @@ h3{
 
 fieldset{
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid rgb(71, 44, 224);
   display: flex;
-  margin-left: 600px;
+  margin-left: 500px;
   max-width:max-content;
   
   margin-top: 10px;
@@ -71,7 +67,7 @@ fieldset{
   
 } 
 
-.fa-trash,.fa-pencil-square-o, .fa-quote-left{
+.fa-pencil-square-o, .fa-quote-left{
   align-items: center;
   display: flex;
   font-size: 25px;
@@ -80,11 +76,61 @@ fieldset{
 } 
 .fa-pencil-square-o{
   
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 
+#chat-title{
+    background: rgb(192, 191, 191);
+    padding: 10px;
+    border-radius: 20px;
+}
 
+#chat-title{
+  display: grid;
+  grid: 36px / 1fr 36px;
+  align-content: center;
+  grid-area:chat-title;
+  color:blue;
+  font-weight: bold;
+  font-size: 1.0rem;
+  border-radius: 0 10px 0 0;
+  box-shadow:0 1px 3px -1px rgba(0.0.0.0.75);
+  padding: 16px;
+}
 
+#chat-title .img-profile{
+  background: rgb(206, 69, 5);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border:3px solid rgb(60, 156, 4);
+  
 
+}
 
+.right .icon {
+  display: inline-block;
+  width: 35px;
+  margin-left: 10px;
+  margin-left: 20px;
+
+}
+.right{
+  margin-left: 700px;
+  margin-top: -25px;
+}
+#emoji-btn{
+  position: absolute;
+  font-size: 1.2rem;
+  background: transparent;
+  /* right: -10px; */
+  /* top: 2px;
+  opacity: 0.5; */ 
+  margin-right: -450px;
+  margin-top: 5px;
+}

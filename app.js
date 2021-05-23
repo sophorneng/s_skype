@@ -10,15 +10,18 @@ app.use(express.static('public'));
 app.get('/', (req, res) => res.send("Hello Project"))
 
 let users = [
-    {username: "sophorn", password : "007", color: "red", text: "i want to sleep"},
-    {username: "sreytouch", password : "777777", color: "green", text: "wooooooooo"},
+    {username: "sophorn", color: "red", text: "hello everyone how are you"},
+    {username: "sreytouch", color: "green", text: "yes hello i'm fine. thank"},
 
 ]
 
+// show data on browser
 app.get('/users', (req , res) =>{
     res.send(users);
 })
 
+
+// get users to updat
 app.post('/users', (req, res) =>{
     
     let user = {text:req.body.text};
