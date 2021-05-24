@@ -6,12 +6,11 @@
   width: 70%;
   border-radius: 30px;
   margin-right: 20px;
+  display:none;
   
 }
 
-h3{
-  text-align: center;
-}
+
 
 
 .store {
@@ -133,4 +132,35 @@ fieldset{
   opacity: 0.5; */ 
   margin-right: -450px;
   margin-top: 5px;
+}
+.form{
+  margin-left: 600px;
+  border-radius: 20px;
+  
+}
+#name,
+#pass {
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    /* margin: 10px 0; */
+   
+    
+}
+
+#log {
+  width: 15%;
+  height: 7vh;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: rgb(231, 82, 187);
+  color: #fff;
+  margin-left: 60px;
+  
+}
+
+body{
+  background-image: url(https://cdn.wallpapersafari.com/42/44/nBLTEc.jpg);
+  background-size: cover;
+  font-family: sans-serif;
 }

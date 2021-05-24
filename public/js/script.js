@@ -50,11 +50,11 @@ function displayUser(res){
 
 
 
-
 function sendMessage(e){
     const text = document.querySelector("#inputId").value;
     let user = {text: text};
     const url = "http://localhost:5000/users";
+    // const url = "https://sophornproject.herokuapp.com/users";
     axios.post(url, user).then(displayUser);
 
 
@@ -66,6 +66,24 @@ btnsend.addEventListener('click', sendMessage);
 
 function loadData(){
     const url = "http://localhost:5000/users";
+    // const url = "https://sophornproject.herokuapp.com/users";
     axios.get(url).then(displayUser);
 }
 loadData();
+
+
+
+
+function displayChat(){
+    form.style.display = "none";
+    container.style.display = 'block';
+
+
+}
+
+
+
+let container = document.querySelector('.container');
+let log = document.querySelector("#log")
+log.addEventListener("click", displayChat)
+let form = document.querySelector('.form');
