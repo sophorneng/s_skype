@@ -21,17 +21,17 @@ function displayUser(res){
         const spanOfInput =document.createElement("span");
         spanOfInput.textContent = user.username + ":" + user.text;
 
-        //contain icon quote//
-        const spanOfquote = document.createElement('span');
-        spanOfquote.className = "quote-left fa fa-quote-left hvr-grow";
+        // //contain icon quote//
+        // const spanOfquote = document.createElement('span');
+        // spanOfquote.className = "quote-left fa fa-quote-left hvr-grow";
 
-        //contain icon eidt//
-        const spanOfEdit = document.createElement("span");
-        spanOfEdit.className ="edit fa fa-pencil-square-o hvr-grow";
+        // //contain icon eidt//
+        // const spanOfEdit = document.createElement("span");
+        // spanOfEdit.className ="edit fa fa-pencil-square-o hvr-grow";
 
-        //append all spans to  fieldset//
-        fieldset.appendChild(spanOfquote);
-        fieldset.appendChild(spanOfEdit);
+        // //append all spans to  fieldset//
+        // fieldset.appendChild(spanOfquote);
+        // fieldset.appendChild(spanOfEdit);
         fieldset.appendChild(spanOfInput);
         
         // fieldset.appendChild(span_delete);
