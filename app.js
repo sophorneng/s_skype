@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static('public'));
 
-app.get('/', (req, res) => res.send("Hello Project"))
+// app.get('/', (req, res) => res.send("Hello Project"))
 
 let users = [
     {username: "sophorn", color: "red", text: "hello everyone how are you"},
