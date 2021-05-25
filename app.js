@@ -1,32 +1,41 @@
 const express = require('express');
 const app = express();
+const fs = require("fs");
 
 app.listen(process.env.PORT || 5000, () => console.log("Server running..."));
 
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.static('public'));
+
 
 // app.get('/', (req, res) => res.send("Hello Project"))
 
 let users = [
-    {username: "sophorn", color: "red", text: "hello everyone how are you"},
-    {username: "sreytouch", color: "green", text: "yes hello i'm fine. thank"},
+    {username: "sophorn", password: "123"},
+    {username: "sreytouch",password: "123"}
+];
 
-]
+app.use(express.static('public'));
 
-// show data on browser
-app.get('/users', (req , res) =>{
-    res.send(users);
-})
-
-
-// get users to updat
-app.post('/users', (req, res) =>{
-    
-    let user = {text:req.body.text};
-    users.push(user);
-    res.send(users);
-
-
+app.post("/login",(req, res) =>{
+   let name = req.body.name;
+   let pass = req.body.password;
+   let status = false;
+   for(let user of users){
+       if (name === user.username && pass === user.password){
+           status = true;
+       }
+   }
+   res.send(status);
 });
+let messages = [];
+messages = JSON.parse(fs.readFileSync("databes.json"));
+app.post("/send", (req, res) => {
+    let message = req.body;
+    messages.push(message);
+    console.log(messages);
+    fs.writeFileSync("databes.json", JSON.stringify(messages)); 
+})
+app.get("/getmessage",(req, res)=>{
+    res.send(messages);
+})
