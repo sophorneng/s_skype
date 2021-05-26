@@ -34,7 +34,7 @@ messages = JSON.parse(fs.readFileSync("databes.json"));
 app.post("/send", (req, res) => {
     let message = req.body;
     messages.push(message);
-    // console.log(messages);
+    console.log(messages);
     res.send(message)
     fs.writeFileSync("databes.json", JSON.stringify(messages)); 
 })

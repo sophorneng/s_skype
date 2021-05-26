@@ -28,7 +28,7 @@ function displayMessage() {
 
         if (listOfUser !== null) {
             listOfUser.remove();
-        }
+        };
     })
 };
 
