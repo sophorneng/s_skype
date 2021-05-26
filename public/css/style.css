@@ -28,10 +28,10 @@
   background: #8da19285;
   display: flex;
   
-  
-  
-  
 }
+
+
+
 #inputId{
   padding: 12px;
   border-radius: 20px;
@@ -163,4 +163,19 @@ body{
   background-image: url(https://cdn.wallpapersafari.com/42/44/nBLTEc.jpg);
   background-size: cover;
   font-family: sans-serif;
+}
+
+.b_I {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.fa-bold{
+  margin-right: 10px;
+}
+
+.fa-italic,.fa-bold{
+  font-size: 17px;
 }

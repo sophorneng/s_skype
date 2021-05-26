@@ -5,6 +5,7 @@ function getLogin(){
     axios.post(url +"/login", user).then((res) => {
         if(res.data){
             localStorage.setItem("user", username.value);
+            // localStorage.setItem("color", username.color);
 
             window.location.pathname = "home.html";
         }else{
