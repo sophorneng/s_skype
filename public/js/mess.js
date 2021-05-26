@@ -23,9 +23,14 @@ function displayMessage() {
             fieldset.appendChild(spanOfInput);
             storeOfNewUser.appendChild(fieldset);
             
+        };
+        const listOfUser = document.querySelector(".listOfUser");
+
+        if (listOfUser !== null) {
+            listOfUser.remove();
         }
     })
-}
+};
 
 
 let messa = document.querySelector("#inputId");
