@@ -14,9 +14,11 @@ function displayMessage() {
         for (message of data) {
             const fieldset = document.createElement("fieldset");
             const spanOfInput = document.createElement("span");
- 
-            
-
+            if(message.name === "sophorn"){
+                fieldset.style.background = "gray"
+            }else{
+                fieldset.style.background = "green"
+            }
             spanOfInput.textContent = message.name + " : " + message.text;
             fieldset.appendChild(spanOfInput);
             storeOfNewUser.appendChild(fieldset);
