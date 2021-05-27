@@ -11,8 +11,8 @@ app.use(express.urlencoded());
 // app.get('/', (req, res) => res.send("Hello Project"))
 
 let users = [
-    {username: "sophorn", password: "123", color: "red"},
-    {username: "sreytouch",password: "123", color: "yellow"},
+    {username: "sophorn", password: "123"},
+    {username: "sreytouch",password: "123"},
 ];
 
 app.use(express.static('public'));
