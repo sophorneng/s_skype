@@ -1,4 +1,6 @@
 function sendMesage() {
+    const ding = document.getElementById("dingSound");
+    ding.play();
     const text = document.querySelector("#inputId").value;
     // User.text = text;
     // User.bold = bold;
@@ -108,3 +110,22 @@ function Italic() {
 const textItalic = document.querySelector("#italic");
 textItalic.addEventListener("click", Italic);
 console.log(textItalic)
+
+
+
+function backLogin() {
+    window.location.href = "../index.html"
+    }
+    let btnBack = document.querySelector('#logout');
+    btnBack.addEventListener('click', backLogin);
+
+let btnemoji = document.getElementById('emoji-btn');
+const picker = new EmojiButton();
+document.addEventListener('DOMContentLoaded', () => {
+picker.on('emoji', emoji => {
+document.querySelector('#inputId').value += emoji;
+});
+btnemoji.addEventListener('click', () => {
+picker.togglePicker(btnemoji);
+});
+});

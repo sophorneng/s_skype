@@ -8,45 +8,56 @@
     <title>skype app</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="js/mess.js" defer></script>
-    
+
 </head>
 
 <body>
-         
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Welcome to our app</a>
+            <form class="form-inline">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="logout"><b>Logout</b></button>
+            </form>
+        </nav>
+        <br>
         <div class="container">
 
 
-                <div id="chat-title">
-                    <h2 id="username">SOPHORN</h2>
-                    <div class="img-profile">S</div>
-                    
-                    <div class="right">
-                        <img src="call.png" class="icon">
-                        <img src="video.png" class="icon">
-                    </div>
+            <div id="chat-title">
+                <h2 id="username">SOPHORN</h2>
+                <div class="img-profile">S</div>
+
+                <div class="right">
+                    <img src="call.png" class="icon">
+                    <img src="video.png" class="icon">
                 </div>
-            
-                <div class="store">
-                    <div class="listOfUser">
-                        
-                        
-                    </div>
-                        
-                </div>  
-                <div class="textmessage">
-                    <div class="b_I">
-                        <span class="fa fa-bold" id = "bold"></span>
-                        <span class="fa fa-italic" id = "italic"></span>
-                    </div>
-                    <input type="text" id="inputId" placeholder="Type your message">
-                    <button id="emoji-btn">&#127773;</button>
-                    <button id ="submit">submit</button>
-                    
-                    
+            </div>
+
+            <div class="store">
+                <div class="listOfUser">
+
+
                 </div>
-                
+
+            </div>
+            <div class="textmessage">
+                <div class="b_I">
+                    <span class="fa fa-bold" id="bold"></span>
+                    <span class="fa fa-italic" id="italic"></span>
+                </div>
+                <input type="text" id="inputId" placeholder="Type your message">
+                <button id="emoji-btn">&#127773;</button>
+                <button id="submit">submit</button>
+
+
+            </div>
+            <audio id="dingSound">
+                <source src="sound.mp3" type="audio/ogg">
+                <source src="sound.mp3" type="audio/mpeg">
+            </audio>
+
         </div>
 </body>
 
