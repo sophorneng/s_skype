@@ -20,4 +20,4 @@ let password = document.querySelector("#pass");
 let btnLogign = document.querySelector("#log");
 btnLogign.addEventListener("click", getLogin);
 
-let url = "http://localhost:5000";
+let url = "http://https://sophornproject.herokuapp.com/";

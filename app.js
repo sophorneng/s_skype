@@ -11,8 +11,8 @@ app.use(express.urlencoded());
 // app.get('/', (req, res) => res.send("Hello Project"))
 
 let users = [
-    {username: "sophorn", password: "123",bold: "", italic:"", id: 1},
-    {username: "sreytouch",password: "123", bold: "", italic:"", id: 2},
+    {username: "sophorn", password: "123"},
+    {username: "sreytouch",password: "123"},
 ];
 
 app.use(express.static('public'));
@@ -24,7 +24,6 @@ app.post("/login",(req, res) =>{
    for(let user of users){
        if (name === user.username && pass === user.password){
            status = true;
-           
        }
    }
    res.send(status);
