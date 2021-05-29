@@ -20,4 +20,4 @@ let password = document.querySelector("#pass");
 let btnLogign = document.querySelector("#log");
 btnLogign.addEventListener("click", getLogin);
 
-let url = "http://https://sophornproject.herokuapp.com";
+let url = "https://sophornproject.herokuapp.com";
