@@ -45,8 +45,8 @@ function displayMessage() {
 let messa = document.querySelector("#inputId");
 let btnSend = document.querySelector("#submit");
 btnSend.addEventListener("click", sendMesage);
-let url = "http://localhost:5000";
-// let url = "https://sophornproject.herokuapp.com";
+// let url = "http://localhost:5000";
+let url = "https://sophornproject.herokuapp.com";
 displayMessage();
 
 

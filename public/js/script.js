@@ -21,5 +21,5 @@ let password = document.querySelector("#pass");
 let btnLogign = document.querySelector("#log");
 btnLogign.addEventListener("click", getLogin);
 
-let url = "http://localhost:5000";
-// let url = "https://sophornproject.herokuapp.com";
+// let url = "http://localhost:5000";
+let url = "https://sophornproject.herokuapp.com";
