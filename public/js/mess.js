@@ -1,16 +1,18 @@
 // send date to server
 function sendMesage() {
+    // put radio....................//
     const Sound = document.getElementById("Sound");
     Sound.play();
+// get user that we store in localstroage to user
     let message = { name: localStorage.getItem("user"), text: messa.value };
     console.log(message)
     axios.post(url + "/send", message, User).then((res) => {
         
         displayMessage();
-    })
+    });
     // clear value that we was input
     document.querySelector("#inputId").value = "";
-}
+};
 // display message to server
 function displayMessage() {
     let storeOfNewUser = document.querySelector(".store");
@@ -21,9 +23,10 @@ function displayMessage() {
             const fieldset = document.createElement("fieldset");
             const spanOfInput = document.createElement("span");
             if(user.name === "sophorn"){
-                fieldset.style.background = "yellow"
+                fieldset.style.background = "#0080ff"
+                
             }else{
-                fieldset.style.background = "green"
+                fieldset.style.background = "#828E84"
             }
             spanOfInput.textContent = user.name + " : " + user.text;
             fieldset.appendChild(spanOfInput);
@@ -42,7 +45,8 @@ function displayMessage() {
 let messa = document.querySelector("#inputId");
 let btnSend = document.querySelector("#submit");
 btnSend.addEventListener("click", sendMesage);
-let url = "https://sophornproject.herokuapp.com";
+let url = "http://localhost:5000";
+// let url = "https://sophornproject.herokuapp.com";
 displayMessage();
 
 
@@ -72,6 +76,6 @@ let User = {};
 
 function logout() {
     window.location.href = "../index.html"
-    }
-    let btnBack = document.querySelector('#logout');
-    btnBack.addEventListener('click', logout);
+}
+let btnBack = document.querySelector('#logout');
+btnBack.addEventListener('click', logout);

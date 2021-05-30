@@ -5,19 +5,21 @@ function getLogin(){
     axios.post(url +"/login", user).then((res) => {
         if(res.data){
             localStorage.setItem("user", username.value);
-            // localStorage.setItem("color", username.color);
+            localStorage.setItem("password", password.value)
+           
 
             window.location.pathname = "home.html";
         }else{
             alert("try again");
         }
     })
-    
+};
 
-}
+
 let username = document.querySelector("#name");
 let password = document.querySelector("#pass");
 let btnLogign = document.querySelector("#log");
 btnLogign.addEventListener("click", getLogin);
 
-let url = "https://sophornproject.herokuapp.com";
+let url = "http://localhost:5000";
+// let url = "https://sophornproject.herokuapp.com";

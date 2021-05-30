@@ -8,15 +8,20 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 
-// app.get('/', (req, res) => res.send("Hello Project"))
 
+// create user in server 
 let users = [
-    {username: "sophorn", password: "123"},
-    {username: "sreytouch",password: "123"},
+    {username: "sophorn", password: "123", color: "red"},
+    {username: "sreytouch",password: "123", color: "blue"},
 ];
 
+// show user on server
+app.get("/users",(req, res) => res.send(users));
+
+// we use express.static from server to communicate with folder public
 app.use(express.static('public'));
 
+// 
 app.post("/login",(req, res) =>{
    let name = req.body.name;
    let pass = req.body.password;
@@ -28,6 +33,7 @@ app.post("/login",(req, res) =>{
    }
    res.send(status);
 });
+
 let messages = [];
 messages = JSON.parse(fs.readFileSync("databes.json"));
 app.post("/send", (req, res) => {
